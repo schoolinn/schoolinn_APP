@@ -1,3 +1,104 @@
 page-home {
+    color: #5d5d5d;
+    .inn-users {
+        padding-top: 8px;
+    }
 
+    .item {
+        background-color: #fff;
+        border: 1px solid #d7d9dd;
+        border-width: 1px 0;
+        margin-bottom: 8px;
+    }
+
+    .inn-user-hd {
+        padding: 0 15px;
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 1px solid #d7d9dd;
+        span {
+            float: left;
+            font-size: 12px;
+            color: #5d5d5d;
+        }
+        .name {
+            margin-right: 6px;
+            color: #0d0d0d;
+            font-size: 16px;
+        }
+        .sign {
+            display: inline-block;
+            border: 1px solid #a9afbe;
+            line-height: 1;
+            padding: 3px 5px;
+            margin-top: 10px;
+        }
+        .work {
+            float: right;
+        }
+    }
+
+    .inn-users-bd {
+        padding: 15px;
+        border-bottom: 1px solid #d7d9dd;
+        p {
+            overflow: hidden;
+            margin: 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .infos {
+            overflow: hidden;
+            margin-bottom: 13px;
+            .title {
+                margin-top: 5px;
+                margin-bottom: 8px;
+                font-size: 17px;
+                color: #0d0d0d;
+            }
+            .price {
+                width: 90px;
+                height: 24px;
+                line-height: 24px;
+                border-radius: 12px;
+                background-color: #0091ed;
+                color: #fff;
+                text-align: center;
+            }
+        }
+
+        .skills p {
+            line-height: 1.5;
+        }
+
+        .avatar {
+            float: left;
+            margin-right: 14px;
+            img {
+                float: left;
+                width: 59px;
+                height: 59px;
+                border-radius: 30px;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .inn-users-ft {
+        overflow: hidden;
+        background-color: #fafafa;
+        padding: 15px;
+        span {
+            float: left;
+        }
+        .star-list {
+            margin-right: 9px;
+        }
+        .icon {
+            font-size: 12px;
+        }
+        .comment {
+            float: right;
+        }
+    }
 }

@@ -1,0 +1,37 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+}
+
+ion-content {
+    .scroll-content {
+        margin-bottom: 48px;
+    }
+    background: #ececec !important;
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif !important;
+    color: rgba(0, 0, 0, 0.8) !important;
+    font-size: 14px !important;
+}
+
+.clear::after {
+    content: ' ';
+    display: block;
+    clear: both;
+}
+
+page-tabs {
+    
+    .tabs .tab-button {
+        min-height: 4rem;
+    }
+
+    .tab-button-icon {
+        color: rgba(103, 103, 103, 0.7) !important;
+    }
+
+    .tab-button[aria-selected=true] .tab-button-icon {
+        color: #387ef5 !important;
+    }
+}
