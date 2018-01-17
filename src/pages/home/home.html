@@ -6,9 +6,15 @@
 -->
 <ion-header no-border>
 
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+  <ion-toolbar color="primary">
+    <ion-buttons start>
+      <button ion-button icon-only color="royal">
+        <i class="icon iconfont icon-xinxishitu"></i>
+      </button>
+    </ion-buttons>
+    <ion-searchbar placeholder="搜索您关心的技术、行业"></ion-searchbar>
+    
+  </ion-toolbar>
 
 </ion-header>
 
@@ -17,111 +23,13 @@
 
   <div class="inn-users clear">
 
-    <div class="item clear">
-
-      <div class="inn-user-hd clear">
-        <span class="name">郭立华</span>
-        <span class="sign">已签约</span>
-        <span class="work">广州 前端工程师 5年</span>
-      </div>
-
-      <div class="inn-users-bd">
-        <div class="infos">
-          <div class="avatar">
-            <img src="https://programmerinn.b0.upaiyun.com/useralbum/99049/icon990491492063012.jpg!mediumicon"> </div>
-          <div class="desc">
-            <p class="title">武汉天乐 高级后端工程师</p>
-            <p class="price">800元/天</p>
-          </div>
-        </div>
-        <div class="skills">
-          <p>技能：WInform，VB，MFC，Delphi，C，C#，C++，ASP.NET，jQuery，html</p>
-          <p>作品：中国民生银行网银自动转账软件，LED大屏统一控制系统，多媒体管理平台，多屏显示系统，归元寺LED祈福大屏管理系统，LED屏信息统一管理及发布系统（LED群发系统）</p>
-        </div>
-      </div>
-
-      <div class="inn-users-ft">
-        <span class="star-list"> 好评度:
-          <i class="icon yellow iconfont icon-xingxing"></i>
-          <i class="icon yellow iconfont icon-xingxing"></i>
-          <i class="icon yellow iconfont icon-xingxing"></i>
-          <i class="icon yellow iconfont icon-xingxing"></i>
-          <i class="icon yellow iconfont icon-xingxing"></i>
-        </span>
-        <span class="success-rate">成功率：100%</span>
-        <span class="comment">1人评论</span>
-      </div>
-
-    </div>
-
-    <div class="item clear">
-      <div class="inn-user-hd">
-        <span class="name">franksanny</span>
-        <span class="sign">已签约</span>
-        <span class="work">宁波 C# 6年</span>
-      </div>
-      <div class="inn-users-bd">
-        <div class="infos">
-          <div class="avatar">
-            <img src="https://innsta.b0.upaiyun.com/image/usericon/1.png"> </div>
-          <div class="desc">
-            <p class="title">安贞科技 C#开发</p>
-            <p class="price">400元/天</p>
-          </div>
-        </div>
-        <div class="skills">
-          <p>技能：PHP，ASP.NET，C#，html，SQL/MYSQL</p>
-          <p>作品：甜蜜时空，BIM网站，海洋执法，跨进电商ERP，互联网+安全.执法.减灾</p>
-        </div>
-      </div>
-      <div class="inn-users-ft">
-        <span class="star-list"> 好评度:
-          <i class="star yellow icon"></i>
-          <i class="star yellow icon"></i>
-          <i class="star yellow icon"></i>
-          <i class="star yellow icon"></i>
-          <i class="star yellow icon"></i>
-        </span>
-        <span class="success-rate">成功率：100%</span>
-        <span class="comment">1人评论</span>
-      </div>
-    </div>
-
-    <div class="item clear">
-      <div class="inn-user-hd">
-        <span class="name">常</span>
-        <span class="sign">已签约</span>
-        <span class="work">杭州 iOS 4年</span>
-      </div>
-      <div class="inn-users-bd">
-        <div class="infos">
-          <div class="avatar">
-            <img src="https://innsta.b0.upaiyun.com/image/usericon/9.png"> </div>
-          <div class="desc">
-            <p class="title">网易 高级iOS开发工程师</p>
-            <p class="price">600元/天</p>
-          </div>
-        </div>
-        <div class="skills">
-          <p>技能：Javascript，MySQL，C++，Objective-C，swift</p>
-          <p>作品：网易云课堂，咖袖说，网易有钱，01星球，炉石传说助手</p>
-        </div>
-      </div>
-      <div class="inn-users-ft">
-        <span class="star-list"> 好评度:
-          <i class="star yellow icon"></i>
-          <i class="star yellow icon"></i>
-          <i class="star yellow icon"></i>
-          <i class="star yellow icon"></i>
-          <i class="star yellow icon"></i>
-        </span>
-        <span class="success-rate">成功率：67%</span>
-        <span class="comment">2人评论</span>
-      </div>
-    </div>
+    <user-card></user-card>
+    <user-card></user-card>
+    <user-card></user-card>
+    <user-card></user-card>
+    <user-card></user-card>
+    <user-card></user-card>
 
   </div>
-
-
 
 </ion-content>
