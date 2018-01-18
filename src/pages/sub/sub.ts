@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the TabsPage page.
+ * Generated class for the SubPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,21 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-tabs',
-  templateUrl: 'tabs.html',
+  selector: 'page-sub',
+  templateUrl: 'sub.html',
 })
-export class TabsPage {
-
-  tabHome = 'HomePage';
-  artMore = 'ArticlePage';
-  tabSub = 'SubPage';
-  tabMore = 'MorePage';
+export class SubPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad TabsPage');
+    console.log('ionViewDidLoad SubPage');
   }
 
 }
