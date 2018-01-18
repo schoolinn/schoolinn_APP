@@ -15,11 +15,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SubPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  rootNavCtrl: NavController;
+
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams
+  ) {
+    this.rootNavCtrl = this.navCtrl;
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SubPage');
+  }
+
+  //打开标签详情
+  openTag(){
+    this.rootNavCtrl.push( 'TagPage' );
   }
 
 }

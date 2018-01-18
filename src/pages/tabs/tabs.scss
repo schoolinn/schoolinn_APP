@@ -20,6 +20,7 @@ ul, li {
 }
 
 ion-content {
+    overflow-x: hidden;
     background: #ececec !important;
     font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif !important;
     color: rgba(0, 0, 0, 0.8) !important;

@@ -1,0 +1,75 @@
+page-question {
+    .searchbar-input {
+        box-shadow: none !important;
+        border-radius: 999999px !important;
+        line-height: 2.2rem !important;
+    }
+    .mainbar {
+        background: #fff;
+        .summary {
+            border-bottom: 1px solid #e4e6e8;
+            overflow: hidden;
+            background-color: #FFF;
+            display: flex;
+            .votes {
+                width: calc(60px);
+                padding: 12px 0 15px 0;
+                background-color: rgba(214,217,220,0.2);
+                .vote-block {
+                    margin-left: 7px;
+                    .mini-counts {
+                        font-size: 16px;
+                        display: inline-block;
+                        width: 25px;
+                        float: left;
+                        text-align: right;
+                        color: #77808F;
+                    }
+                }
+            }
+            .details {
+                width: 85%;
+                width: calc(100% - 60px);
+                align-self: center;
+                padding: 10px;
+                h2 {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 1.25;
+                    margin-bottom: 5px;
+                    word-break: break-word;
+                    margin-top: 0;
+                }
+                .tags {
+                    margin-bottom: 5px;
+                    .post-tag {
+                        color: #39739d;
+                        background: #e1ecf4;
+                        border: 1px solid #e1ecf4;
+                        margin: 0 2px 2px 0;
+                        text-decoration: none;
+                        text-align: center;
+                        font-weight: normal;
+                        display: inline-block;
+                        font-size: 11px;
+                        padding: 3px 5px;
+                        white-space: nowrap;
+                        border-radius: 0;
+                    }
+                }
+                .meta {
+                    display: block;
+                    font-size: 14px;
+                    color: #9fa6ad;
+                    .time {
+                        color: inherit;
+                    }
+                    .author {
+                        text-decoration: none;
+                        color: #07C;
+                    }
+                }
+            }
+        }
+    }
+}
