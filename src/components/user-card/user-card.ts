@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 /**
@@ -13,7 +13,12 @@ import { NavController } from 'ionic-angular';
 })
 export class UserCardComponent {
 
+  @Input() data: any = {
+    Skill_list: []
+  };
   rootNavCtrl: NavController;
+
+  ats = [1,1,1,]
 
   constructor(
     public navCtrl: NavController

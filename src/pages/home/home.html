@@ -23,12 +23,10 @@
 
   <div class="inn-users clear">
 
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
+    <div *ngFor="let item of idata">
+      <user-card [data]="item"></user-card>
+    </div>
+    
 
   </div>
 
