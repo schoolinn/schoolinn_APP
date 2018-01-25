@@ -7,6 +7,9 @@ page-tag {
             width: 56px;
             height: 56px;
             margin: 0 auto 10px;
+            background-size: cover !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
         }
         .tag-info {
             text-align: center;
@@ -21,11 +24,10 @@ page-tag {
             }
         }
     }
-
     .item {
         background: #fff;
         padding: 20px;
-        border-bottom: 1px solid rgba(178,186,194,.15);
+        border-bottom: 1px solid rgba(178, 186, 194, .15);
         .info-row {
             margin: .5rem 0 .8rem;
             white-space: nowrap;

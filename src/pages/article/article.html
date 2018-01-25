@@ -6,209 +6,35 @@
 -->
 <ion-header no-border>
 
-  <ion-navbar color="primary">
-    <ion-title>热门文章</ion-title>
-  </ion-navbar>
+    <ion-navbar color="primary">
+        <ion-title>热门文章</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
 <ion-content>
 
-  <div class="item clear">
-    <div class="info-row title-row">
-      <p class="title">老司机带你顺手撸一个支付宝蚂蚁森林效果</p>
+    <div class="item clear" *ngFor="let item of idata">
+        <div class="info-row title-row">
+            <p class="title">{{item.Title}}</p>
+        </div>
+        <div class="info-row meta-row">
+            <ul class="meta-list">
+                <li class="category">
+                    <span>{{item.Tag[0]['name']}}</span>
+                </li>
+                <li class="item_li username clickable">
+                    Devon
+                </li>
+                <li class="item_li">
+                    23小时前
+                </li>
+                <li class="item_li">
+                    901 次阅读
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="info-row meta-row">
-      <ul class="meta-list">
-        <li class="category">
-          <span>前端</span>
-        </li>
-        <li class="item_li username clickable">
-          Devon
-        </li>
-        <li class="item_li">
-          23小时前
-        </li>
-        <li class="item_li">
-          901 次阅读
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="item clear">
-    <div class="info-row title-row">
-      <p class="title">老司机带你顺手撸一个支付宝蚂蚁森林效果</p>
-    </div>
-    <div class="info-row meta-row">
-      <ul class="meta-list">
-        <li class="category">
-          <span>前端</span>
-        </li>
-        <li class="item_li username clickable">
-          Devon
-        </li>
-        <li class="item_li">
-          23小时前
-        </li>
-        <li class="item_li">
-          901 次阅读
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="item clear">
-    <div class="info-row title-row">
-      <p class="title">老司机带你顺手撸一个支付宝蚂蚁森林效果</p>
-    </div>
-    <div class="info-row meta-row">
-      <ul class="meta-list">
-        <li class="category">
-          <span>前端</span>
-        </li>
-        <li class="item_li username clickable">
-          Devon
-        </li>
-        <li class="item_li">
-          23小时前
-        </li>
-        <li class="item_li">
-          901 次阅读
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="item clear">
-    <div class="info-row title-row">
-      <p class="title">老司机带你顺手撸一个支付宝蚂蚁森林效果</p>
-    </div>
-    <div class="info-row meta-row">
-      <ul class="meta-list">
-        <li class="category">
-          <span>前端</span>
-        </li>
-        <li class="item_li username clickable">
-          Devon
-        </li>
-        <li class="item_li">
-          23小时前
-        </li>
-        <li class="item_li">
-          901 次阅读
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="item clear">
-    <div class="info-row title-row">
-      <p class="title">老司机带你顺手撸一个支付宝蚂蚁森林效果</p>
-    </div>
-    <div class="info-row meta-row">
-      <ul class="meta-list">
-        <li class="category">
-          <span>前端</span>
-        </li>
-        <li class="item_li username clickable">
-          Devon
-        </li>
-        <li class="item_li">
-          23小时前
-        </li>
-        <li class="item_li">
-          901 次阅读
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="item clear">
-    <div class="info-row title-row">
-      <p class="title">老司机带你顺手撸一个支付宝蚂蚁森林效果</p>
-    </div>
-    <div class="info-row meta-row">
-      <ul class="meta-list">
-        <li class="category">
-          <span>前端</span>
-        </li>
-        <li class="item_li username clickable">
-          Devon
-        </li>
-        <li class="item_li">
-          23小时前
-        </li>
-        <li class="item_li">
-          901 次阅读
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="item clear">
-    <div class="info-row title-row">
-      <p class="title">老司机带你顺手撸一个支付宝蚂蚁森林效果</p>
-    </div>
-    <div class="info-row meta-row">
-      <ul class="meta-list">
-        <li class="category">
-          <span>前端</span>
-        </li>
-        <li class="item_li username clickable">
-          Devon
-        </li>
-        <li class="item_li">
-          23小时前
-        </li>
-        <li class="item_li">
-          901 次阅读
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="item clear">
-    <div class="info-row title-row">
-      <p class="title">老司机带你顺手撸一个支付宝蚂蚁森林效果</p>
-    </div>
-    <div class="info-row meta-row">
-      <ul class="meta-list">
-        <li class="category">
-          <span>前端</span>
-        </li>
-        <li class="item_li username clickable">
-          Devon
-        </li>
-        <li class="item_li">
-          23小时前
-        </li>
-        <li class="item_li">
-          901 次阅读
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="item clear">
-    <div class="info-row title-row">
-      <p class="title">老司机带你顺手撸一个支付宝蚂蚁森林效果</p>
-    </div>
-    <div class="info-row meta-row">
-      <ul class="meta-list">
-        <li class="category">
-          <span>前端</span>
-        </li>
-        <li class="item_li username clickable">
-          Devon
-        </li>
-        <li class="item_li">
-          23小时前
-        </li>
-        <li class="item_li">
-          901 次阅读
-        </li>
-      </ul>
-    </div>
-  </div>
 
 </ion-content>

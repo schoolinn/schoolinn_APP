@@ -6,54 +6,19 @@
 -->
 <ion-header no-border>
 
-  <ion-navbar color="primary">
-    <ion-title>技术圈</ion-title>
-  </ion-navbar>
+    <ion-navbar color="primary">
+        <ion-title>技术圈</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
 <ion-content>
-  <ul class="clear">
-    <li class="fl" (click)="openTag()">
-      <div class="logo" style="background-image: url(&quot;https://dn-mhke0kuv.qbox.me/5d70fd6af940df373834.png?imageView2/2/w/200/h/64/q/85/format/webp/interlace/1&quot;); background-size: contain;"></div>
-      <p class="name">JavaScript</p>
-    </li>
-    <li class="fl">
-      <div class="logo" style="background-image: url(&quot;https://dn-mhke0kuv.qbox.me/5d70fd6af940df373834.png?imageView2/2/w/200/h/64/q/85/format/webp/interlace/1&quot;); background-size: contain;"></div>
-      <p class="name">JavaScript</p>
-    </li>
-    <li class="fl">
-      <div class="logo" style="background-image: url(&quot;https://dn-mhke0kuv.qbox.me/5d70fd6af940df373834.png?imageView2/2/w/200/h/64/q/85/format/webp/interlace/1&quot;); background-size: contain;"></div>
-      <p class="name">JavaScript</p>
-    </li>
-    <li class="fl">
-      <div class="logo" style="background-image: url(&quot;https://dn-mhke0kuv.qbox.me/5d70fd6af940df373834.png?imageView2/2/w/200/h/64/q/85/format/webp/interlace/1&quot;); background-size: contain;"></div>
-      <p class="name">JavaScript</p>
-    </li>
-    <li class="fl">
-      <div class="logo" style="background-image: url(&quot;https://dn-mhke0kuv.qbox.me/5d70fd6af940df373834.png?imageView2/2/w/200/h/64/q/85/format/webp/interlace/1&quot;); background-size: contain;"></div>
-      <p class="name">JavaScript</p>
-    </li>
-    <li class="fl">
-      <div class="logo" style="background-image: url(&quot;https://dn-mhke0kuv.qbox.me/5d70fd6af940df373834.png?imageView2/2/w/200/h/64/q/85/format/webp/interlace/1&quot;); background-size: contain;"></div>
-      <p class="name">JavaScript</p>
-    </li>
-    <li class="fl">
-      <div class="logo" style="background-image: url(&quot;https://dn-mhke0kuv.qbox.me/5d70fd6af940df373834.png?imageView2/2/w/200/h/64/q/85/format/webp/interlace/1&quot;); background-size: contain;"></div>
-      <p class="name">JavaScript</p>
-    </li>
-    <li class="fl">
-      <div class="logo" style="background-image: url(&quot;https://dn-mhke0kuv.qbox.me/5d70fd6af940df373834.png?imageView2/2/w/200/h/64/q/85/format/webp/interlace/1&quot;); background-size: contain;"></div>
-      <p class="name">JavaScript</p>
-    </li>
-    <li class="fl">
-      <div class="logo" style="background-image: url(&quot;https://dn-mhke0kuv.qbox.me/5d70fd6af940df373834.png?imageView2/2/w/200/h/64/q/85/format/webp/interlace/1&quot;); background-size: contain;"></div>
-      <p class="name">JavaScript</p>
-    </li>
-    <li class="fl">
-      <div class="logo" style="background-image: url(&quot;https://dn-mhke0kuv.qbox.me/5d70fd6af940df373834.png?imageView2/2/w/200/h/64/q/85/format/webp/interlace/1&quot;); background-size: contain;"></div>
-      <p class="name">JavaScript</p>
-    </li>
-  </ul>
+    <ul class="clear">
+        <li class="fl" (click)="openTag( item )" *ngFor="let item of idata">
+            <div class="logo" [style.background]="'url('+item.Timg+')'"></div>
+            <p class="name">{{item.Name}}</p>
+        </li>
+
+    </ul>
 </ion-content>

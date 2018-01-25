@@ -18,6 +18,9 @@ page-sub {
                 width: 54px;
                 height: 54px;
                 margin-bottom: 6px;
+                background-size: cover !important;
+                background-position: center center !important;
+                background-repeat: no-repeat !important;
             }
             .name {
                 line-height: 36px;
