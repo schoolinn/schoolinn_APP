@@ -7,7 +7,7 @@
 <ion-header no-border>
 
   <ion-navbar color="primary">
-    <ion-title>我的名字-哈哈哈</ion-title>
+    <ion-title>{{data.Name}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -17,9 +17,9 @@
 
   <header class="top-profile">
     <div class="avatar img-wrap">
-      <img src="https://innsta.b0.upaiyun.com/image/usericon/7.png" class="ui circular image">
+      <img src="{{data.Avatar}}" class="ui circular image">
     </div>
-    <p class="name">负责的东军</p>
+    <p class="name">{{data.Name}}</p>
     <p class="intro">
       <span href="javascript:;">重庆&nbsp;&nbsp;</span>
       <span href="javascript:;">酷戴科技&nbsp;&nbsp;</span>
@@ -45,9 +45,8 @@
   </header>
 
   <section class="hire-info">
-    <p class="work-price">￥500元 / 8小时</p>
-    <p>可工作时间: 工作日9:00-18:00、周末9:00-18:00</p>
-    <p>可工作地点:</p>
+    <p class="work-price">￥{{data.Work_price}}元 / 8小时</p>
+    <p>可工作时间: {{data.Work_time}}</p>
     <p class="comments">
       <span>好评度:
         <i class="icon yellow iconfont icon-xingxing"></i>
@@ -71,10 +70,7 @@
       个人介绍
     </div>
     <div class="content proginn-user-info">
-      <p>1、本科（211）、硕士（985）；</p>
-      <p>2、丰富的Java开发经验（5year+），精通spring mvc、mybatis、mysql、dubbo、kafka等，对多线程编程、高并发均有丰富的开发经验；</p>
-      <p>3、工作经历涉及行业包括传统电软CRM、电子商务、互联网金融等；</p>
-      <p>4、有10人+团队管理经验。</p>
+      <p>{{data.Dec}}</p>
     </div>
   </section>
 
@@ -84,22 +80,13 @@
     </div>
     <div class="content">
       <ul class="J_Works">
-        <li>
-          <p class="time">2015-09-07 - 至今</p>
+        <li *ngFor="let work of data.Work_list">
+          <p class="time">{{work.Time}}</p>
           <p class="hd">
-            <span class="company">互联网金融</span>
-            <span class="title">高级Java工程师</span>
+            <span class="company">{{work.Cname}}</span>
+            <span class="title">{{work.Job}}</span>
           </p>
-          <p class="summary">teamleader，金融贷后系统、呼叫系统、电销系统框架搭建、核心代码编写，熟悉第三方支付流程</p>
-        </li>
-        <li>
-          <p class="time">2012-04-18 - 2015-09-01</p>
-          <p class="hd">
-            <span class="company">华为技术有限公司</span>
-            <span class="title">Java工程师</span>
-          </p>
-          <p class="summary">进行电信软件CRM开发，负责多个局点的开户、合同续约、促销等核心个人业务开发与维护。 代码抽象，模块化程度高
-          </p>
+          <p class="summary">{{work.Dec}}</p>
         </li>
       </ul>
     </div>
@@ -109,54 +96,13 @@
     <div class="header">技能</div>
     <div class="content">
       <ul class="skill-list">
-        <li class="skill-item">
-          <div class="name"> kafka </div>
+        <li class="skill-item" *ngFor="let skill of data.Skill_list">
+          <div class="name"> {{skill.Name}} </div>
           <div class="progress">
-            <div class="level-4"></div>
+            <div class="level-{{skill.Level}}"></div>
           </div>
         </li>
-        <li class="skill-item">
-          <div class="name"> MySQL </div>
-          <div class="progress">
-            <div class="level-4"></div>
-          </div>
-        </li>
-        <li class="skill-item">
-          <div class="name"> SQL </div>
-          <div class="progress">
-            <div class="level-4"></div>
-          </div>
-        </li>
-        <li class="skill-item">
-          <div class="name"> SpringMVC </div>
-          <div class="progress">
-            <div class="level-4"></div>
-          </div>
-        </li>
-        <li class="skill-item">
-          <div class="name"> Java
-            <span class="level-mark J_LevelMark" data-content="开发者已在平台上成功完成1个该技能相关项目">1级经验</span>
-          </div>
-          <div class="progress">
-            <div class="level-5"></div>
-          </div>
-        </li>
-        <li class="skill-item">
-          <div class="name"> Redis
-            <span class="level-mark J_LevelMark" data-content="开发者已在平台上成功完成1个该技能相关项目">1级经验</span>
-          </div>
-          <div class="progress">
-            <div class="level-5"></div>
-          </div>
-        </li>
-        <li class="skill-item">
-          <div class="name"> dubbo
-            <span class="level-mark J_LevelMark" data-content="开发者已在平台上成功完成1个该技能相关项目">1级经验</span>
-          </div>
-          <div class="progress">
-            <div class="level-5"></div>
-          </div>
-        </li>
+        
       </ul>
 
     </div>
@@ -166,7 +112,7 @@
     <div class="header">作品</div>
     <div class="content">
       <ul class="work-list">
-        <li class="work-item clearfix">
+        <li class="work-item clearfix" *ngFor="let work of data.Works">
           <div class="fl w-left">
             
               <i class="icon iconfont icon-dianzhany"></i>
@@ -175,95 +121,18 @@
             
           </div>
           <div class="w-right">
-            
-              <div class="duty">全站开发</div>
-              <div class="name">HIA 家具网</div>
-              <div class="description">本人独立完成的第一个作品,有前端客户访问页面及后台企业管理员管理前段资讯与新闻</div>
+      
+              <div class="name">{{work.Name}}</div>
+              <div class="description">{{work.Dec}}</div>
             
             <div class="image-list">
               <ul>
-                <li class="J_PreviewImage" style="background: url('https://programmerinnfile.b0.upaiyun.com/default/102328/59735abb6cd2f/Front_PC.png!mediumicon') center center;background-size: cover;"
-                  data-src="https://programmerinnfile.b0.upaiyun.com/default/102328/59735abb6cd2f/Front_PC.png">
-                </li>
-                <li class="J_PreviewImage" style="background: url('https://programmerinnfile.b0.upaiyun.com/default/102328/59735ac5b255e/mgr_PC.png!mediumicon') center center;background-size: cover;"
-                  data-src="https://programmerinnfile.b0.upaiyun.com/default/102328/59735ac5b255e/mgr_PC.png">
-                </li>
-                <li class="J_PreviewImage" style="background: url('https://programmerinnfile.b0.upaiyun.com/default/102328/59735b81aa784/project_PC.png!mediumicon') center center;background-size: cover;"
-                  data-src="https://programmerinnfile.b0.upaiyun.com/default/102328/59735b81aa784/project_PC.png">
-                </li>
+                <li class="J_PreviewImage" *ngFor="let img of work.Imgs" class="imgs" [style.background]="'url('+img+')'"></li>
               </ul>
             </div>
           </div>
         </li>
-        <li class="work-item clearfix">
-          <div class="fl w-left">
-            
-              <i class="icon iconfont icon-dianzhany"></i>
-              <br>
-              <span data-role="number">0</span>
-            
-          </div>
-          <div class="w-right">
-            
-              <div class="duty">全站开发</div>
-              <div class="name">仁懋半导体</div>
-              <div class="description">深入学习专业后独立完成的一个作品</div>
-            
-            <div class="image-list">
-              <ul>
-                <li class="J_PreviewImage" style="background: url('https://programmerinnfile.b0.upaiyun.com/default/102328/59735c5c59b31/inmark_home.png!mediumicon') center center;background-size: cover;"
-                  data-src="https://programmerinnfile.b0.upaiyun.com/default/102328/59735c5c59b31/inmark_home.png">
-                </li>
-              </ul>
-            </div>
-          </div>
-        </li>
-        <li class="work-item clearfix">
-          <div class="fl w-left">
-            
-              <i class="icon iconfont icon-dianzhany"></i>
-              <br>
-              <span data-role="number">1</span>
-            
-          </div>
-          <div class="w-right">
-            
-              <div class="duty">修复各类bug及新增一些后期补增小功能</div>
-              <div class="name">布谷供应链</div>
-              <div class="description">该链接到的是公司主页，是静态页，手机端和PC后台有更丰富的项目经验积累</div>
-            
-            <div class="image-list">
-              <ul>
-                <li class="J_PreviewImage" style="background: url('https://programmerinnfile.b0.upaiyun.com/default/102328/59735d5b8221f/bugu_staticPage.png!mediumicon') center center;background-size: cover;"
-                  data-src="https://programmerinnfile.b0.upaiyun.com/default/102328/59735d5b8221f/bugu_staticPage.png">
-                </li>
-              </ul>
-            </div>
-          </div>
-        </li>
-        <li class="work-item clearfix">
-          <div class="fl w-left">
-            
-              <i class="icon iconfont icon-dianzhany"></i>
-              <br>
-              <span data-role="number">0</span>
-            
-          </div>
-          <div class="w-right">
-            
-              <div class="duty">全栈开发</div>
-              <div class="name">PersonalBlog</div>
-              <div class="description">所有项目的列表，简易的展示，</div>
-            
-            <div class="image-list">
-              <ul>
-                <li class="J_PreviewImage" style="background: url('https://programmerinnfile.b0.upaiyun.com/default/102328/59735e4599ce1/blog.png!mediumicon') center center;background-size: cover;"
-                  data-src="https://programmerinnfile.b0.upaiyun.com/default/102328/59735e4599ce1/blog.png">
-                </li>
-              </ul>
-            </div>
-          </div>
-        </li>
+        
       </ul>
     </div>
   </section>

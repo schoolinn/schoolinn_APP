@@ -15,7 +15,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class WoPage {
 
+  data: any = {}
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.data = this.navParams.get("data");
+    console.log( this.data );
   }
 
   ionViewDidLoad() {

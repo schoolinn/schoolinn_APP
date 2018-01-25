@@ -13,12 +13,8 @@ import { NavController } from 'ionic-angular';
 })
 export class UserCardComponent {
 
-  @Input() data: any = {
-    Skill_list: []
-  };
+  @Input() data: any = {};
   rootNavCtrl: NavController;
-
-  ats = [1,1,1,]
 
   constructor(
     public navCtrl: NavController
@@ -29,7 +25,9 @@ export class UserCardComponent {
 
   //查看TA的详细页面
   openWo(){
-    this.rootNavCtrl.push( 'WoPage' );
+    this.rootNavCtrl.push( 'WoPage',{
+      data: this.data
+    } );
   }
 
 }

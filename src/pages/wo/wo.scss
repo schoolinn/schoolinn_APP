@@ -3,6 +3,11 @@ page-wo {
         margin: 0em 0em 1em;
         line-height: 1.33;
     }
+    .imgs {
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
     .top-profile {
         background: #258fe6;
         color: #fff;
