@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    <div class="item clear" *ngFor="let item of list">
+    <div (click)="openArticle( item )" class="item clear" *ngFor="let item of list">
         <div class="info-row title-row">
             <p class="title">{{item.Title}}}</p>
         </div>

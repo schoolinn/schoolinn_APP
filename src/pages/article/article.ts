@@ -17,12 +17,14 @@ import { Headers, Http } from '@angular/http';
 export class ArticlePage {
 
   idata:any = [];
+  rootNavCtrl: NavController;
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
     public http: Http
   ) {
+    this.rootNavCtrl = this.navCtrl;
     this.init()
   }
 
@@ -39,6 +41,13 @@ export class ArticlePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ArticlePage');
+  }
+
+  //打开文章详情
+  openArticle( data ){
+    this.rootNavCtrl.push( 'SeeArticlePage',{
+      data: data
+    } );
   }
 
 }

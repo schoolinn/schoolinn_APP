@@ -15,7 +15,7 @@
 
 <ion-content>
 
-    <div class="item clear" *ngFor="let item of idata">
+    <div (click)="openArticle( item )" class="item clear" *ngFor="let item of idata">
         <div class="info-row title-row">
             <p class="title">{{item.Title}}</p>
         </div>

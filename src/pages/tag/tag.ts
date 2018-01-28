@@ -40,6 +40,13 @@ export class TagPage {
       });
   }
 
+  //打开文章详情
+  openArticle( data ){
+    this.navCtrl.push( 'SeeArticlePage',{
+      data: data
+    } );
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad TagPage');
   }
