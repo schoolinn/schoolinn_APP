@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Headers, Http } from '@angular/http';
+import { Http } from '@angular/http';
 
 /**
  * Generated class for the HomePage page.
@@ -9,7 +9,6 @@ import { Headers, Http } from '@angular/http';
  * Ionic pages and navigation.
  */
 
-declare var $:any;
 @IonicPage()
 @Component({
   selector: 'page-home',
@@ -28,7 +27,7 @@ export class HomePage {
   }
 
   init(){
-    let url = "http://192.168.1.104:3000/ping";
+    let url = "http://192.168.0.107:3000/ping";
 
     this.http.get(url)
       .subscribe((res) => {

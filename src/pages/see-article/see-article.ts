@@ -9,7 +9,6 @@ import { DomSanitizer } from '@angular/platform-browser'
  * Ionic pages and navigation.
  */
 
-declare var $:any
 @IonicPage()
 @Component({
   selector: 'page-see-article',
