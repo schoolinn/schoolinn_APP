@@ -29,7 +29,7 @@ export class ArticlePage {
   }
 
   init(){
-    let url = "http://192.168.1.104:3000/article";
+    let url = "http://192.168.1.110:3000/article";
 
     this.http.get(url)
       .subscribe((res) => {

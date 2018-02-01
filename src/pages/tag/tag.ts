@@ -30,7 +30,7 @@ export class TagPage {
 
   init(){
     
-    let url = "http://192.168.1.104:3000/tag_art/"+this.data.Id;
+    let url = "http://192.168.1.110:3000/tag_art/"+this.data.Id;
 
     this.http.get(url)
       .subscribe((res) => {

@@ -27,7 +27,7 @@ export class HomePage {
   }
 
   init(){
-    let url = "http://192.168.0.107:3000/ping";
+    let url = "http://192.168.0.110:3000/ping";
 
     this.http.get(url)
       .subscribe((res) => {
