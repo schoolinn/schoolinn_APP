@@ -29,11 +29,11 @@ export class SubPage {
   }
 
   init(){
-    let url = "http://192.168.1.104:3000/tag";
+    let url = "http://192.168.0.110:3000/tag";
 
     this.http.get(url)
       .subscribe((res) => {
-        console.log(res['_body']);
+        //console.log(res['_body']);
         var idas = res['_body']
         this.idata = JSON.parse(idas)['data']
       });

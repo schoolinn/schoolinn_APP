@@ -29,11 +29,15 @@ export class ArticlePage {
   }
 
   init(){
+<<<<<<< HEAD
+    let url = "http://192.168.0.110:3000/article";
+=======
     let url = "http://192.168.1.110:3000/article";
+>>>>>>> 013cb89310226296f266694d5729877ec025188b
 
     this.http.get(url)
       .subscribe((res) => {
-        console.log(res['_body']);
+        //console.log(res['_body']);
         var idas = res['_body']
         this.idata = JSON.parse(idas)['data']
       });

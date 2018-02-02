@@ -31,7 +31,7 @@ export class HomePage {
 
     this.http.get(url)
       .subscribe((res) => {
-        console.log(res['_body']);
+        //console.log(res['_body']);
         var idas = res['_body']
         this.idata = JSON.parse(idas)['data']
       });

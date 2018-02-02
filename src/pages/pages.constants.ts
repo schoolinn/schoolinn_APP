@@ -6,3 +6,4 @@ export const SUB_PAGE = 'SubPage';
 export const TAG_PAGE = 'TagPage';
 export const QUESTION_PAGE = 'QuestionPage';
 export const SEE_ARTICLE_PAGE = 'SeeArticlePage';
+export const SEE_QUE_PAGE = 'SeeQuePage';

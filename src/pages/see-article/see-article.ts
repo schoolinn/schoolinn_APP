@@ -24,7 +24,7 @@ export class SeeArticlePage {
     public sanitizer: DomSanitizer
   ) {
     this.data = this.navParams.get("data");
-    console.log(this.data);
+    //console.log(this.data);
   }
 
   tr(html){
